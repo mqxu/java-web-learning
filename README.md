@@ -2,7 +2,7 @@
 
 > java-web-learning 2022
 
-## day01-tomcat-servlet
+## day01-servlet
 
 ## day02-request
 
