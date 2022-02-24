@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day01-tomcat-servlet" />
+        <module name="day01-servlet" />
+        <module name="day02-request" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="day01-tomcat-servlet" target="17" />
+      <module name="day01-servlet" target="17" />
+      <module name="day02-request" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="day01-tomcat-servlet" options="--add-modules java.base" />
+      <module name="day01-servlet" options="" />
     </option>
   </component>
 </project>
