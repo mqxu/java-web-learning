@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="day03-response:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="day03-response:war exploded">
     <output-path>$PROJECT_DIR$/day03-response/target/day03-response-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
@@ -15,7 +15,8 @@
           <element id="module-output" name="day03-response" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.15" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:20041127.091804" />
+          <element id="library" level="project" name="Maven: junit:junit:3.8.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

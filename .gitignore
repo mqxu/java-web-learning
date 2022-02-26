@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 .DS_STORE
-
+target/
 # Log file
 *.log
 

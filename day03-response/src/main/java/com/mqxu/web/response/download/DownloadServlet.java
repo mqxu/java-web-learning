@@ -32,7 +32,8 @@ public class DownloadServlet extends HttpServlet {
 
         //3.设置response的响应头
         //3.1设置响应头类型：content-type
-        String mimeType = servletContext.getMimeType(filename);//获取文件的mime类型
+        //获取文件的mime类型
+        String mimeType = servletContext.getMimeType(filename);
         response.setHeader("content-type", mimeType);
         //3.2设置响应头打开方式:content-disposition
 
@@ -46,7 +47,7 @@ public class DownloadServlet extends HttpServlet {
         //4.将输入流的数据写出到输出流中
         ServletOutputStream sos = response.getOutputStream();
         byte[] buff = new byte[1024 * 8];
-        int len = 0;
+        int len;
         while ((len = fis.read(buff)) != -1) {
             sos.write(buff, 0, len);
         }

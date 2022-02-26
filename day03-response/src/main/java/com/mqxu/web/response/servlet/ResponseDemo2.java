@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ResponseDemo2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("demo2222222........");
+        System.out.println("responseDemo2被访问...");
         Object msg = request.getAttribute("msg");
         System.out.println(msg);
     }

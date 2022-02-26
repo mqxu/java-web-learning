@@ -22,7 +22,7 @@ public class ResponseDemo4 extends HttpServlet {
         // response.setCharacterEncoding("utf-8");
         //告诉浏览器，服务器发送的消息体数据的编码，建议浏览器使用该编码解码
         //response.setHeader("content-type","text/html;charset=utf-8");
-        //简单形式，设置编码
+        //简单形式设置编码
         response.setContentType("text/html;charset=utf-8");
         //1.获取字符输出流
         PrintWriter pw = response.getWriter();

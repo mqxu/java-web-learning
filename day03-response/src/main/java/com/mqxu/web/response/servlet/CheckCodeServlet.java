@@ -30,7 +30,7 @@ public class CheckCodeServlet extends HttpServlet {
         //画笔对象
         Graphics g = image.getGraphics();
         //设置画笔颜色
-        g.setColor(Color.PINK);
+        g.setColor(Color.WHITE);
         g.fillRect(0, 0, width, height);
 
         //2.2画边框
@@ -41,7 +41,7 @@ public class CheckCodeServlet extends HttpServlet {
         //生成随机角标
         Random ran = new Random();
 
-        for (int i = 1; i <= 4; i++) {
+        for (int i = 1; i <= 5; i++) {
             int index = ran.nextInt(str.length());
             //获取随机字符
             char ch = str.charAt(index);

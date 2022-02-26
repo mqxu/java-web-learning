@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day01-servlet" />
+        <module name="quickstart" />
         <module name="day02-request" />
         <module name="day03-response" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="day01-servlet" target="17" />
       <module name="day02-request" target="17" />
       <module name="day03-response" target="17" />
+      <module name="quickstart" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

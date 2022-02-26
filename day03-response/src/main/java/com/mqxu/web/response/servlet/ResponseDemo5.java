@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * responseDemo4 ：乱码处理方法
+ * responseDemo4 ：字节流输出乱码处理方法
  *
  * @author mqxu
  */

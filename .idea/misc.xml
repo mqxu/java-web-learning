@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/day01-servlet" />
     <file type="web" url="file://$PROJECT_DIR$/day02-request" />
     <file type="web" url="file://$PROJECT_DIR$/day03-response" />
+    <file type="web" url="file://$PROJECT_DIR$/quickstart" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/day02-requet/pom.xml" />
         <option value="$PROJECT_DIR$/day02-request/pom.xml" />
         <option value="$PROJECT_DIR$/day03-response/pom.xml" />
+        <option value="$PROJECT_DIR$/quickstart/pom.xml" />
       </list>
     </option>
   </component>

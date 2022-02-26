@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/day02-request/day02-request.iml" filepath="$PROJECT_DIR$/day02-request/day02-request.iml" />
       <module fileurl="file://$PROJECT_DIR$/day03-response/day03-response.iml" filepath="$PROJECT_DIR$/day03-response/day03-response.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-web-learning.iml" filepath="$PROJECT_DIR$/.idea/java-web-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quickstart/quickstart.iml" filepath="$PROJECT_DIR$/quickstart/quickstart.iml" />
     </modules>
   </component>
 </project>

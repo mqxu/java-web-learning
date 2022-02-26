@@ -26,9 +26,10 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
+            <version>20041127.091804</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
