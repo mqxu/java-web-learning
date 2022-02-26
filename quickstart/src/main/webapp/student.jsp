@@ -39,7 +39,7 @@
         //遍历集合
         for (Student student : studentList) {
             //将每个Student对象存入当前页面的内置对象，便于用EL表达式展现对象的信息
-            application.setAttribute("student", student);
+            request.setAttribute("student", student);
     %>
     <%-- 循环产生div，用来展示每个Student对象的数据--%>
     <div class="item">
