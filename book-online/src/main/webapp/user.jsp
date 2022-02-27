@@ -184,7 +184,7 @@
                     <div>
                         <p>常居：${user.address}</p>
                         <p>账号：${user.account}</p>
-                        <p>${user.joinDate}加入</p>
+                        <p>${user.createTime}加入</p>
                     </div>
                 </div>
                 <br>

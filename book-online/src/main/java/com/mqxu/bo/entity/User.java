@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * 用户实体类
@@ -24,5 +24,5 @@ public class User {
     private String nickname;
     private String avatar;
     private String address;
-    private LocalDate joinDate;
+    private LocalDateTime createTime;
 }

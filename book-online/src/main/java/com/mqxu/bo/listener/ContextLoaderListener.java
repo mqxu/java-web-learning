@@ -8,6 +8,7 @@ import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,9 +32,9 @@ public class ContextLoaderListener implements ServletContextListener {
         //创建并生成用户数据列表
         List<User> userList;
         User[] users = {
-                new User(1, "mqxu@qq.com", "698d51a19d8a121ce581499d7b701668", "陶然然", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/me.jpg", "江苏南京", LocalDate.of(2020, 6, 11)),
-                new User(2, "aaa@qq.com", "698d51a19d8a121ce581499d7b701668", "开到荼蘼", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/1.jpg", "浙江杭州", LocalDate.of(2021, 2, 18)),
-                new User(3, "bbb@qq.com", "698d51a19d8a121ce581499d7b701668", "往后余生", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/2.jpg", "湖北武汉", LocalDate.of(2022, 1, 19))
+                new User(1, "mqxu@qq.com", "698d51a19d8a121ce581499d7b701668", "陶然然", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/me.jpg", "江苏南京", LocalDateTime.of(2020, 6, 11, 12, 12, 12)),
+                new User(2, "aaa@qq.com", "698d51a19d8a121ce581499d7b701668", "开到荼蘼", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/1.jpg", "浙江杭州", LocalDateTime.of(2021, 2, 18, 12, 12, 12)),
+                new User(3, "bbb@qq.com", "698d51a19d8a121ce581499d7b701668", "往后余生", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/2.jpg", "湖北武汉", LocalDateTime.of(2022, 1, 19, 12, 12, 12))
         };
         userList = Arrays.asList(users);
 
