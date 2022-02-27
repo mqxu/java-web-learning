@@ -31,9 +31,9 @@ public class ContextLoaderListener implements ServletContextListener {
         //创建并生成用户数据列表
         List<User> userList;
         User[] users = {
-                new User(1, "aaa@qq.com", "698d51a19d8a121ce581499d7b701668", "小幸运", "user1.jpg", "浙江杭州", LocalDate.of(2018, 6, 11)),
-                new User(2, "bbb@qq.com", "698d51a19d8a121ce581499d7b701668", "开到荼蘼", "user2.jpg", "江苏南京", LocalDate.of(2019, 2, 18)),
-                new User(3, "ccc@qq.com", "698d51a19d8a121ce581499d7b701668", "往后余生", "user3.jpg", "湖北武汉", LocalDate.of(2019, 8, 19))
+                new User(1, "mqxu@qq.com", "698d51a19d8a121ce581499d7b701668", "陶然然", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/me.jpg", "江苏南京", LocalDate.of(2020, 6, 11)),
+                new User(2, "aaa@qq.com", "698d51a19d8a121ce581499d7b701668", "开到荼蘼", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/1.jpg", "浙江杭州", LocalDate.of(2021, 2, 18)),
+                new User(3, "bbb@qq.com", "698d51a19d8a121ce581499d7b701668", "往后余生", "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/2.jpg", "湖北武汉", LocalDate.of(2022, 1, 19))
         };
         userList = Arrays.asList(users);
 
@@ -52,7 +52,6 @@ public class ContextLoaderListener implements ServletContextListener {
                 new Book(10, "哀伤纪", "book5.jpg", "钟晓阳"),
                 new Book(11, "漫长的婚约", "book1.jpg", "[法] 塞巴斯蒂安"),
                 new Book(12, "庸人自扰", "book2.jpg", "[英]戴伦•麦加维")
-
         };
         bookList = Arrays.asList(books);
 

@@ -92,7 +92,7 @@
             <hr>
             <div class="row">
                 <div class="col-6">
-                    <img src="/images/${book.cover}" alt="">
+                    <img src="${book.cover}" alt="">
                 </div>
                 <div class="col-4">
                     <p>${book.author}</p>

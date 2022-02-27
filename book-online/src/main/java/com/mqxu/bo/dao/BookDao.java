@@ -35,4 +35,15 @@ public class BookDao {
             return null;
         }
     }
+
+    public Book getBookById(int id) {
+        try {
+            String sql = "SELECT * FROM t_book WHERE id = ? ";
+            return template.queryForObject(sql,
+                    new BeanPropertyRowMapper<>(Book.class), id);
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

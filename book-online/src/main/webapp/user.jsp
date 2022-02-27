@@ -34,8 +34,9 @@
             border: none;
             border-radius: 3px;
             margin-left: 50px;
-            color: rgb(187, 187, 202);
-            font-size: 16px;
+            padding: 5px;
+            color: #9b9b9b;
+            font-size: 14px;
         }
 
         .info {
@@ -70,7 +71,7 @@
 
         .info-box .top img {
             width: 55%;
-            height: 85%;
+            height: 100%;
             margin-right: 5px;
             border-radius: 5px;
         }
@@ -129,7 +130,7 @@
         <li>我的豆瓣</li>
     </ul>
     <label>
-        <input type="text" placeholder="搜索你感兴趣的内容和人" class="search-input">
+        <input type="text" placeholder="搜索你感兴趣的内容" class="search-input">
     </label>
 </div>
 <br>
@@ -140,7 +141,7 @@
         <%--左侧2/3区域--%>
         <div class="col-8">
             <div class="info">
-                <img src="images/${user.avatar}" alt="" class="profile">
+                <img src="${user.avatar}" alt="" class="profile">
                 <h2>${user.nickname}</h2>
             </div>
             <br>
@@ -179,7 +180,7 @@
         <div class="col-4">
             <div class="info-box">
                 <div class="top">
-                    <img src="images/${user.avatar}" alt="">
+                    <img src="${user.avatar}" alt="">
                     <div>
                         <p>常居：${user.address}</p>
                         <p>账号：${user.account}</p>

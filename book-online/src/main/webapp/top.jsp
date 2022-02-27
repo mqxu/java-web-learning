@@ -6,7 +6,7 @@
 %>
 <ul>
     <li>
-        <a href="${pageContext.request.contextPath}/index">首页</a>
+        <a href="${pageContext.request.contextPath}/home">首页</a>
     </li>
     <li>
         <a href="#">读书</a>

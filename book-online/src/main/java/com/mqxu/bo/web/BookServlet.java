@@ -2,7 +2,6 @@ package com.mqxu.bo.web;
 
 import com.mqxu.bo.dao.BookDao;
 import com.mqxu.bo.entity.Book;
-import com.mqxu.bo.entity.User;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,29 +10,26 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 /**
  * @description:
  * @author: mqxu
- * @date: 2022-02-22
+ * @date: 2022-02-27
  **/
-@WebServlet("/success")
-public class SuccessServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //获取request域中共享的user对象
-        User user = (User) request.getAttribute("user");
-        if (user != null) {
-            request.getSession().setAttribute("user", user);
-            response.sendRedirect("/home");
-        }
-    }
-
-
+@WebServlet(urlPatterns = "/book/*")
+public class BookServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doPost(req, resp);
+        //获取请求的URI，并去除空格
+        String requestPath = req.getRequestURI().trim();
+        //获得最后一个"/"的位置
+        int position = requestPath.lastIndexOf("/");
+        String id = requestPath.substring(position + 1);
+        //调用BookDao查找
+        Book book = new BookDao().getBookById(Integer.parseInt(id));
+        req.setAttribute("book", book);
+        req.getRequestDispatcher("/book_detail.jsp").forward(req, resp);
     }
+
 }
