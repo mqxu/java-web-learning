@@ -17,6 +17,6 @@ class BookDaoTest {
     @Test
     void selectAll() {
         List<Book> books = new BookDao().selectAll();
-        System.out.println(books);
+        assertEquals(6, books.size());
     }
 }
