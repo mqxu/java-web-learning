@@ -4,47 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mqxu.bo</groupId>
     <artifactId>book-online</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>book-online</name>
     <packaging>war</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-        <junit.version>5.8.2</junit.version>
-    </properties>
+    <parent>
+        <groupId>com.mqxu.web</groupId>
+        <artifactId>java-web-learning</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <dependencies>
-        <!--jakarta依赖-->
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <!--junit依赖-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <!--lombok依赖-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-            <scope>provided</scope>
-        </dependency>
         <!--druid数据库连接池依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>

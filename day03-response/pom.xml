@@ -4,29 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mqxu.web</groupId>
     <artifactId>day03-response</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>day03-response</name>
     <packaging>war</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-    </properties>
+    <parent>
+        <groupId>com.mqxu.web</groupId>
+        <artifactId>java-web-learning</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <dependencies>
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>20041127.091804</version>
+            <version>1.15</version>
         </dependency>
     </dependencies>
 

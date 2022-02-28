@@ -10,20 +10,11 @@
     <name>day01-servlet</name>
     <packaging>war</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
-            <!--<scope>provided</scope>-->
-        </dependency>
-    </dependencies>
+    <parent>
+        <groupId>com.mqxu.web</groupId>
+        <artifactId>java-web-learning</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <build>
         <plugins>
