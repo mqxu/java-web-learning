@@ -19,7 +19,7 @@ public interface BrandMapper {
      *
      * @return List<Brand>
      */
-    @Select("SELECT * FROM tb_brand ")
+    @Select("SELECT * FROM tb_brand ORDER BY ordered ")
     List<Brand> selectAll();
 
     /**

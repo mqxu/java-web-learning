@@ -29,19 +29,7 @@
             <version>8.0.26</version>
         </dependency>
 
-        <!--jstl标签-->
-        <!--<dependency>-->
-        <!--    <groupId>jstl</groupId>-->
-        <!--    <artifactId>jstl</artifactId>-->
-        <!--    <version>1.2</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--    <groupId>taglibs</groupId>-->
-        <!--    <artifactId>standard</artifactId>-->
-        <!--    <version>1.1.2</version>-->
-        <!--</dependency>-->
     </dependencies>
-
 
     <build>
         <plugins>

@@ -28,10 +28,12 @@ public class UpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1. 接收表单提交的数据，封装为一个Brand对象
         String id = request.getParameter("id");
+        System.out.println(id);
         String brandName = request.getParameter("brandName");
         String companyName = request.getParameter("companyName");
         String ordered = request.getParameter("ordered");
         String description = request.getParameter("description");
+        String status = request.getParameter("status");
 
         //封装为一个Brand对象
         Brand brand = new Brand();
@@ -40,7 +42,8 @@ public class UpdateServlet extends HttpServlet {
         brand.setCompanyName(companyName);
         brand.setOrdered(Integer.parseInt(ordered));
         brand.setDescription(description);
-        brand.setStatus(1);
+        brand.setStatus(Integer.parseInt(status));
+        System.out.println(brand);
 
         //2. 调用service 完成修改
         brandService.update(brand);

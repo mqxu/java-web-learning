@@ -13,7 +13,7 @@
         <h1 id="loginMsg">LOGIN</h1>
         <p><label for="username">Username</label><input id="username" name="username" type="text"></p>
         <p><label for="password">Password</label><input id="password" name="password" type="password"></p>
-        <p><label for="remember">Remember</label><input id="remember" name="remember" type="checkbox"></p>
+        <p><label for="remember">Remember</label><input id="remember" name="remember" type="checkbox" checked></p>
         <div id="subDiv">
             <input type="submit" class="button" value="login">
             <input type="reset" class="button" value="reset">
@@ -21,6 +21,25 @@
         </div>
     </form>
 </div>
+<script>
+    //用cookie中的值 填充账号密码
+    let username = document.getElementById('username');
+    let password = document.getElementById('password');
+    username.value = getCookie('username')
+    password.value = getCookie('password')
 
+    // 封装获取指定名的cookie的值
+    function getCookie(cname) {
+        const name = cname + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            const c = ca[i].trim();
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+</script>
 </body>
 </html>

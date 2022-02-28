@@ -1,0 +1,65 @@
+body {
+    background: url("../images/bg.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    height: 100vh;
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+table td a {
+    text-decoration: none;
+    color: #4A9BF5;
+}
+
+table td a:hover {
+    color: #D86736;
+}
+
+input[type="button"], input[type="submit"] {
+    padding: 7px 15px;
+    background-color: #3c6db0;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 80px;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px rgba(75, 75, 75, 0.3);
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #5a88c8;
+}
+
+input[type="button"]:active, input[type="submit"]:active {
+    background-color: #5a88c8;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    color: #333;
+}
+
+textarea, input[type="text"] {
+    border: 1px solid #ccc;
+    text-align: left;
+    border-radius: 5px;
+}

@@ -27,8 +27,8 @@ public class SessionDemo2 extends HttpServlet {
         String username = (String) session.getAttribute("username");
         log.info(username);
         // 3. 销毁session
-        session.invalidate();
-        log.info((String) session.getAttribute("username"));
+        //session.invalidate();
+        //log.info((String) session.getAttribute("username"));
     }
 
     @Override
