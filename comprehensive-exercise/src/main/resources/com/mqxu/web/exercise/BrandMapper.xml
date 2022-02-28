@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mqxu.web.exercise.mapper.BrandMapper">
+    <!--<resultMap id="brandResultMap" type="com.mqxu.web.exercise.entity.Brand">-->
+    <!--    <result column="brand_name" property="brandName"/>-->
+    <!--    <result column="company_name" property="companyName"/>-->
+    <!--</resultMap>-->
+</mapper>
