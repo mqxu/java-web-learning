@@ -29,7 +29,7 @@ public class UploadServlet extends HttpServlet {
         InputStream inputStream = part.getInputStream();
         // 给文件改名
         String fileName = UUID.randomUUID() + part.getSubmittedFileName().substring(part.getSubmittedFileName().lastIndexOf("."));
-        // 路径转换
+        // 获取项目部署的绝对路径——文件上传最终的目录
         ServletContext context = this.getServletContext();
         String realPath = context.getRealPath("upload/" + fileName);
         part.write(realPath);

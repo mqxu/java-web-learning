@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>前后端分离POST请求——文件上传</title>
-    <script src="./js/axios.js"></script>
+    <title>前后端分离POST请求——文件上传并回显</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,42 +13,45 @@
             账号：
             <input type="text" name="account" placeholder="请输入账号" id="account"/>
         </label>
-        <label for="password">
-            密码：
-            <input type="password" name="password" placeholder="请输入密码" id="password"/>
-        </label>
-        <input type="file" name="file" id="uploadFile">
+        <!--选择上传的文件-->
+        <input type="file" name="file" id="file" style="padding-left: 20px;">
+
         <label for="btn">
-            <input type="button" value="注册" id="btn"/>
+            <input type="button" value="注册" id="btn">
         </label>
     </div>
 </div>
 
+<img src="" alt="上传图片显示" style="display: none;" id="preview" width="150">
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script>
-    let uploadFile = document.getElementById('uploadFile')
+
     const btn = document.getElementById("btn");
-    let realPath;
-    uploadFile.onchange = function () {
-        realPath = getObjectURL(uploadFile.files[0]);
-    }
+    const file = document.getElementById('file')
 
     btn.onclick = function () {
+        // alert(file.files[0].name)
         const account = document.getElementById("account").value;
-        const password = document.getElementById("password").value;
-        let data = new FormData();
-        // data.append("account", account)
-        // data.append("password", password)
-        data.append("file", realPath)
-        alert(data.file)
-        let config = {
-            headers: {'Content-Type': 'multipart/form-data'}
-        }
-        axios.post('/upload', config, data)
-            .then(function (response) {
-                alert(JSON.stringify(response.data))
-            }).catch(function (error) {
-            alert(JSON.stringify(error));
-        });
+        let formData = new FormData();
+        // 账号
+        formData.append("account", account)
+        // 选中的图片
+        formData.append("file", file.files[0])
+        axios({
+            url: '/upload1',
+            method: 'post',
+            headers: {'Content-Type': 'multipart/form-data'},
+            data: formData
+        }).then((res) => {
+            alert(res.data)
+            let previewImg = document.getElementById("preview");
+            // 注意js设置属性的值，要用引号包裹，这里用反引号（模版字符串）包裹返回的路径变量
+            previewImg.src = `${res.data}`;
+            // 预览图片设为可见
+            previewImg.style.display = 'block'
+        })
     }
 
 
