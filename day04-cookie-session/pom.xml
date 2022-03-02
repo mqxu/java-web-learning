@@ -17,31 +17,6 @@
 
     <build>
         <plugins>
-            <!--Tomcat插件-->
-            <!--<plugin>-->
-            <!--    <groupId>org.apache.tomcat.maven</groupId>-->
-            <!--    <artifactId>tomcat7-maven-plugin</artifactId>-->
-            <!--    <version>2.2</version>-->
-            <!--    <configuration>-->
-            <!--        &lt;!&ndash;端口&ndash;&gt;-->
-            <!--        <port>8080</port>-->
-            <!--        &lt;!&ndash;项目访问路径&ndash;&gt;-->
-            <!--        <path>/</path>-->
-            <!--        &lt;!&ndash;编码&ndash;&gt;-->
-            <!--        <uriEncoding>UTF-8</uriEncoding>-->
-            <!--    </configuration>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-            <!--    <groupId>org.apache.maven.plugins</groupId>-->
-            <!--    <artifactId>maven-compiler-plugin</artifactId>-->
-            <!--    <version>3.8.1</version>-->
-            <!--    <configuration>-->
-            <!--        <source>17</source>-->
-            <!--        <target>17</target>-->
-            <!--        <encoding>utf-8</encoding>-->
-            <!--    </configuration>-->
-            <!--</plugin>-->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>

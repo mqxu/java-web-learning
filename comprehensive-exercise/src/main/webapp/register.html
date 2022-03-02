@@ -18,7 +18,8 @@
                 用户名
             </label>
             <input name="username" type="text" id="username">
-            <span id="username_err" class="err_msg" style="display: none">用户名不太受欢迎</span>
+            <span id="error" style="display: none">用户名已被使用</span>
+            <span id="success" style="display: none">用户名可以使用</span>
         </div>
 
         <div class="inputs">
@@ -45,6 +46,39 @@
         document.getElementById("verifyCodeImg").src = "/verifyCode?" + new Date().getMilliseconds();
         return false;
     }
+
+    document.getElementById("username").onblur = function () {
+        const username = this.value;
+        let xHttp;
+        if (window.XMLHttpRequest) {
+            xHttp = new XMLHttpRequest();
+        } else {
+            xHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xHttp.open("GET", "http://localhost:8080/check?username=" + username);
+        xHttp.send();
+
+        xHttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                // alert(this.responseText);
+
+                //判断返回结果
+                if (this.responseText === "true") {
+                    //用户名已存在
+                    document.getElementById("success").style.display = 'inline';
+                    document.getElementById("success").style.color = 'green';
+                    document.getElementById("error").style.display = 'none';
+
+                } else {
+                    //用户名不存在
+                    document.getElementById("success").style.display = 'none';
+                    document.getElementById("error").style.display = 'inline';
+                    document.getElementById("error").style.color = 'red';
+
+                }
+            }
+        };
+    };
 </script>
 </body>
 </html>

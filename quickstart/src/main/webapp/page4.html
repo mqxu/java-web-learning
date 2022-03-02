@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前后端分离POST请求——文件上传</title>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h2>前后端分离POST请求——文件上传</h2>
+<div class="parent">
+    <div class="child">
+        <label for="account">
+            账号：
+            <input type="text" name="account" placeholder="请输入账号" id="account"/>
+        </label>
+        <label for="password">
+            密码：
+            <input type="password" name="password" placeholder="请输入密码" id="password"/>
+        </label>
+        <input type="file" name="file" id="uploadFile">
+        <label for="btn">
+            <input type="button" value="注册" id="btn"/>
+        </label>
+    </div>
+</div>
+
+<script>
+    let uploadFile = document.getElementById('uploadFile')
+    const btn = document.getElementById("btn");
+    let realPath;
+    uploadFile.onchange = function () {
+        realPath = getObjectURL(uploadFile.files[0]);
+    }
+
+    btn.onclick = function () {
+        const account = document.getElementById("account").value;
+        const password = document.getElementById("password").value;
+        let data = new FormData();
+        // data.append("account", account)
+        // data.append("password", password)
+        data.append("file", realPath)
+        alert(data.file)
+        let config = {
+            headers: {'Content-Type': 'multipart/form-data'}
+        }
+        axios.post('/upload', config, data)
+            .then(function (response) {
+                alert(JSON.stringify(response.data))
+            }).catch(function (error) {
+            alert(JSON.stringify(error));
+        });
+    }
+
+
+    //获取文件路径
+    function getObjectURL(file) {
+        let url = null;
+        // basic
+        if (window.createObjectURL !== undefined) {
+            url = window.createObjectURL(file)
+            // mozilla(firefox)
+        } else if (window.URL !== undefined) {
+            url = window.URL.createObjectURL(file)
+            // webkit or chrome
+        } else if (window.webkitURL !== undefined) {
+            url = window.webkitURL.createObjectURL(file)
+        }
+        return url;
+    }
+</script>
+
+</body>
+</html>

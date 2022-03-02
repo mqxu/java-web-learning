@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>quickstart</artifactId>
+    <artifactId>day05-ajax</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>quickstart</name>
+    <name>day05-ajax</name>
     <packaging>war</packaging>
 
     <parent>
@@ -16,21 +16,11 @@
     </parent>
 
     <dependencies>
-        <!--json转换-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.79</version>
+            <version>1.2.62</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
-            </plugin>
-        </plugins>
-    </build>
 </project>

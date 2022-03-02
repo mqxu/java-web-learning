@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单向后台提交参数</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<h2>表单向后台提交参数</h2>
+<div class="parent">
+        <!-- form表单，传递account和password参数,此时可省略enctype="application/x-www-form-urlencoded"-->
+        <form action="login1" method="post" enctype="application/x-www-form-urlencoded" class="child">
+            <label for="account">
+                账号：
+                <input type="text" name="account" placeholder="请输入账号" id="account"/>
+            </label>
+            <label for="password">
+                密码：
+                <input type="password" name="password" placeholder="请输入密码" id="password"/>
+            </label>
+            <label for="sub-btn">
+                <input type="submit" value="登录" id="sub-btn"/>
+            </label>
+        </form>
+</div>
+
+
+</body>
+</html>

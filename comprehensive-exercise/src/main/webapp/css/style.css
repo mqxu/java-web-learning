@@ -63,3 +63,13 @@ textarea, input[type="text"] {
     text-align: left;
     border-radius: 5px;
 }
+
+.error {
+    text-align: center;
+    color: red;
+}
+
+.success {
+    text-align: center;
+    color: green;
+}

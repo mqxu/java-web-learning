@@ -1,0 +1,112 @@
+body {
+    background-color: #f6f6f6;
+    font-size: 15px;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 450px;
+    height: 320px;
+    background-color: #3480b0;
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+form {
+    box-sizing: border-box;
+    width: 450px;
+    height: 320px;
+    background-color: #b0cbdc;
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+input[type="text"], input[type="password"] {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 80px 8px 5px;
+    letter-spacing: 1px;
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: #3c6e8d;
+    color: #fff;
+    padding: 10px 90px;
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 320px;
+    margin: 160px 0 0 -225px;
+    background-color: #b0cbdc;
+    padding: 30px 50px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #004974;
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+.last {
+    margin-left: 50px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get请求，url传参</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--超链接跳转，重定向，均为get请求，在url带参数-->
+<div class="parent">
+    <div>
+        <a href="/param?name=张三&age=20">点击跳转传参</a>
+    </div>
+    <!--form如果不写method属性，默认为get请求-->
+    <form action="/param" method="get" class="child">
+        <label>
+            姓名
+            <input type="text" name="name">
+        </label>
+        <label>
+            地址
+            <input type="text" name="address">
+        </label>
+        <input type="submit" value="提交" class="last">
+    </form>
+</div>
+<hr>
+
+
+</body>
+</html>

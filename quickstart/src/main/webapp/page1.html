@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前后端分离GET请求</title>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h2>前后端分离GET请求</h2>
+<div class="parent">
+    <div class="child">
+        <label for="btn1">
+            <input type="button" id="btn1" value="axios get请求1">
+        </label>
+        <label for="btn2">
+            <input type="button" id="btn2" value="axios get请求2">
+        </label>
+    </div>
+</div>
+
+<script>
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    btn1.onclick = function () {
+        // 直接通过url传参
+        axios.get('/param?ID=12345&name=张三')
+            .then(function (response) {
+                alert(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                alert(JSON.stringify(error));
+            });
+    }
+
+
+    btn2.onclick = function () {
+        //通过 params传参
+        axios.get('/param', {
+            params: {
+                ID: 12345,
+                name: '张三'
+            }
+        })
+            .then(function (response) {
+                alert(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                alert(JSON.stringify(error));
+            });
+    }
+
+</script>
+
+</body>
+</html>

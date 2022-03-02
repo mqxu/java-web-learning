@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax请求示例起步2——使用axios发起异步请求</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<button id="btn">请求</button>
+<h2 id="info">请求数据</h2>
+<script>
+    document.getElementById("btn").onclick = function () {
+        // axios({
+        //         method: "get",
+        //         url: "/ajaxServlet1?username=zhangsan"
+        //     }).then(function (resp) {
+        //     document.getElementById("info").innerHTML = JSON.stringify(resp.data);
+        // });
+
+        // 简化写法
+        // axios.get("/ajaxServlet1?username=zhangsan").then(function (resp) {
+        //     document.getElementById("info").innerHTML = JSON.stringify(resp.data);
+        // });
+
+        // axios({
+        //     method: "post",
+        //     url: "/ajaxServlet1",
+        //     data: "username=zhangsan"
+        // }).then(function (resp) {
+        //     document.getElementById("info").innerHTML = JSON.stringify(resp.data);
+        // });
+
+        axios.post("/ajaxServlet1", "username=zhangsan").then((resp) => {
+            document.getElementById("info").innerHTML = JSON.stringify(resp.data);
+        });
+    };
+</script>
+</body>
+</html>
