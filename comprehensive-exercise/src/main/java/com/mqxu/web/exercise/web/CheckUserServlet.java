@@ -24,6 +24,7 @@ public class CheckUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
+        System.out.println(username);
         User user = User.builder().username(username).build();
         boolean flag = userService.register(user);
         response.getWriter().write(String.valueOf(flag));

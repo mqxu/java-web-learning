@@ -18,8 +18,7 @@
                 用户名
             </label>
             <input name="username" type="text" id="username">
-            <span id="error" style="display: none">用户名已被使用</span>
-            <span id="success" style="display: none">用户名可以使用</span>
+            <span id="tip" style="display: none;">提示</span>
         </div>
 
         <div class="inputs">
@@ -42,13 +41,21 @@
 </div>
 
 <script>
-    document.getElementById("changeImg").onclick = function () {
-        document.getElementById("verifyCodeImg").src = "/verifyCode?" + new Date().getMilliseconds();
-        return false;
-    }
+    window.onload = function () {
+        document.getElementById("changeImg").onclick = function () {
+            document.getElementById("verifyCodeImg").src = "/verifyCode?" + new Date().getMilliseconds();
+            return false;
+        }
+    };
 
     document.getElementById("username").onblur = function () {
+        // 取到 username 文本框 的值。 给谁绑定的事件，this就代表谁
         const username = this.value;
+        // 取到显示提示信息的span标签
+        const tip = document.getElementById("tip");
+        // 设置为行内显示（成功与否，都要提示）
+        tip.style.display = 'inline';
+        // 发起XHR请求
         let xHttp;
         if (window.XMLHttpRequest) {
             xHttp = new XMLHttpRequest();
@@ -60,21 +67,16 @@
 
         xHttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
-                // alert(this.responseText);
-
                 //判断返回结果
                 if (this.responseText === "true") {
                     //用户名已存在
-                    document.getElementById("success").style.display = 'inline';
-                    document.getElementById("success").style.color = 'green';
-                    document.getElementById("error").style.display = 'none';
+                    tip.innerHTML = '用户名已存在';
+                    tip.style.color = 'red';
 
                 } else {
                     //用户名不存在
-                    document.getElementById("success").style.display = 'none';
-                    document.getElementById("error").style.display = 'inline';
-                    document.getElementById("error").style.color = 'red';
-
+                    tip.innerHTML = '用户名可用';
+                    tip.style.color = 'green';
                 }
             }
         };

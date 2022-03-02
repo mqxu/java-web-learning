@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用axios向后端请求品牌列表数据</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <a href="addBrand.html">新增品牌</a>
+    <hr>
+    <table id="brandTable">
+
+    </table>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    window.onload = function () {
+        axios({
+            method: "get",
+            url: "http://localhost:8080/selectAllServlet"
+        }).then(function (resp) {
+            // 1. 获取响应数据
+            let brands = resp.data;
+            console.log(brands)
+            // 2. 拼接表头行，推荐使用 反引号
+            let tableData =
+                `<tr>
+                            <th>序号</th>
+                            <th>品牌名称</th>
+                            <th>企业名称</th>
+                            <th>排序</th>
+                            <th>品牌介绍</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                            </tr>`;
+            // 3. 遍历响应回来的数据 brands ，拿到每一条品牌数据
+            for (let i = 0; i < brands.length; i++) {
+                let brand = brands[i];
+                // 4. 从 brand 对象中获取数据并且拼接 数据行，追加到 tableData 字符串变量中
+                tableData +=
+                    `<tr>
+                     <td>${brand.id}</td>
+                     <td>${brand.brandName}</td>
+                     <td>${brand.companyName}</td>
+                     <td>${brand.ordered}</td>
+                     <td>${brand.description}</td>
+                     <td>${brand.status}</td>
+                     <td>
+                        <a href="#">修改</a>
+                        <a href="#">删除</a>
+                     </td>
+                  </tr>`;
+            }
+            // 4. 最后将拼接好的字符串写到表格中
+            document.getElementById("brandTable").innerHTML = tableData;
+        });
+    }
+</script>
+</body>
+</html>
