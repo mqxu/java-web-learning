@@ -27,9 +27,6 @@ public class SignServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         req.getSession().setAttribute("username", username);
-        Map<String, Object> sessionMap = (Map<String, Object>) this.getServletContext().getAttribute("sessionMap");
-        req.setAttribute("sessionMap", sessionMap);
-        req.getRequestDispatcher("/users.jsp").forward(req, resp);
-        //resp.sendRedirect("/users.jsp");
+        resp.sendRedirect("/users.jsp");
     }
 }

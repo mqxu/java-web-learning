@@ -7,7 +7,9 @@
 <body>
 <h2>游戏大厅在线用户</h2>
 <%
-    Map<String, Object> sessionMap = (Map<String, Object>) request.getAttribute("sessionMap");
+    Map<String, Object> sessionMap = (Map<String, Object>) application.getAttribute("sessionMap");
+    // 每隔5秒刷新页面
+    response.setIntHeader("Refresh", 5);
 %>
 <ul>
     <%
