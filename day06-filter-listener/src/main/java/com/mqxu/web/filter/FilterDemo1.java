@@ -22,10 +22,9 @@ public class FilterDemo1 implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("11111");
+        System.out.println("Filter被执行了");
         //放行，放请求访问其本该访问的资源
         filterChain.doFilter(servletRequest, servletResponse);
-        System.out.println("33333");
     }
 
     @Override

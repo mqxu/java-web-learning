@@ -10,6 +10,7 @@ import java.util.Map;
 /**
  * @description: ContextLoaderListener：对ContextLoaderListener对象进行监听（创建、销毁）
  * HttpSessionListener：对Session对象的整体状态监听（创建、销毁）
+ * HttpSessionAttributeListener: 对Session对象d的属性的新增或移除、修改等操作监听
  * @author: mqxu
  * @date: 2022-03-04
  **/

@@ -1,8 +1,4 @@
-package com.mqxu.web.servlet; /**
- * @description: ${description}
- * @author: mqxu
- * @date: 2022-03-04
- **/
+package com.mqxu.web.servlet;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -11,6 +7,11 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * @description: WordsServlet
+ * @author: mqxu
+ * @date: 2022-03-04
+ **/
 @WebServlet(urlPatterns = "/wordsServlet")
 public class WordsServlet extends HttpServlet {
     @Override
